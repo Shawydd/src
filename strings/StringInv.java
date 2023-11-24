@@ -14,7 +14,5 @@ public class StringInv {
 
 		for (int i = 0, len = toinv.length(); i < len; i++)
 			System.out.print(toinv.charAt(len - i - 1));
-
-		System.out.println();
 	}
 }
