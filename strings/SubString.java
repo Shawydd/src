@@ -3,7 +3,7 @@ package lez04.exs.strings;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SubStrINPUT {
+public class SubString {
 	public static void main(String[] args) {
 
 //		Ricerca di Sottostringhe: Scrivere un programma che cerchi una sottostringa all’interno di una stringa data e stampi la posizione di inizio di quella sottostringa.
@@ -32,19 +32,18 @@ public class SubStrINPUT {
 	}
 
 	private static void chances(String sus, String stg, ArrayList<Integer> chance) {
-		if (chance.size() < 1)
+		int size = chance.size();
+		if (size < 1)
 			System.out.println("Your substring '" + sus + "' is not in '" + stg + "'.");
-		else if (chance.size() == 1)
+		else if (size == 1)
 			System.out.println("Your substring '" + sus + "' is in position '" + (chance.get(0) + 1) + "'.");
 		else {
 			System.out.print("Your substring '" + sus + "' is in positions: ");
-			for (int i = 0, j = 0, size = chance.size(); i < size; i++) {
+			for (int i = 0, j = 0; i < size - 1; i++) {
 				j = chance.get(i) + 1;
-				if (i != size - 1)
-					System.out.print(j + ", ");
-				else
-					System.out.print("and " + j + " in '" + stg + "'.");
+				System.out.print(j + ", ");
 			}
+			System.out.print("and " + (chance.get(size - 1) + 1) + " in '" + stg + "'.");
 		}
 	}
 
