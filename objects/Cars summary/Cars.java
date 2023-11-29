@@ -17,12 +17,14 @@ public class Cars {
 		while (true) {
 			System.out.print("Do you wanna make a new car (y\\n): ");
 			temp = scan.nextLine().toUpperCase();
-			//ending check
-			fatality(scan, cars, temp, tempCC);		
-			tempCC = new CarCLA();
-			//tempCC assignment
-			bdy(tempCC, scan);
-			cars.add(tempCC);
+			// ending check
+			fatality(scan, cars, temp, tempCC);
+			if (temp.equals("Y")) {
+				tempCC = new CarCLA();
+				// tempCC assignment
+				bdy(tempCC, scan);
+				cars.add(tempCC);
+			}
 		}
 	}
 
