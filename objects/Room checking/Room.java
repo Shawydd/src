@@ -104,8 +104,6 @@ public class Room {
 	}
 
 	private static int urn(int size, Scanner scan, ArrayList<RoomCLA> staromn) {
-		if (size == 0)
-			return Integer.parseInt(scan.nextLine());
 		int tempn;
 		while (true) {
 			tempn = Integer.parseInt(scan.nextLine());
